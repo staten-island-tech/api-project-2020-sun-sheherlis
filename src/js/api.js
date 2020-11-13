@@ -1,5 +1,3 @@
-const lol = {
-
-}
+const lol = {};
 
 export { lol };
