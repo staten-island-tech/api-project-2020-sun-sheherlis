@@ -1,0 +1,27 @@
+{
+  "name": "api-project-2020-sun-sheherlis",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel src/index.html",
+    "build": "parcel build src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/staten-island-tech/api-project-2020-sun-sheherlis.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/staten-island-tech/api-project-2020-sun-sheherlis/issues"
+  },
+  "homepage": "https://github.com/staten-island-tech/api-project-2020-sun-sheherlis#readme",
+  "dependencies": {
+    "parcel-bundler": "^1.12.4"
+  },
+  "devDependencies": {
+    "sass": "^1.29.0"
+  }
+}
