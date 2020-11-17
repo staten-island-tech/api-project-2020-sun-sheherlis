@@ -1,4 +1,4 @@
 const DOMSelectors = {
-  champs: document.querySelector(".champ-list"),
+  displayContainer: document.querySelector(".champ"),
 };
 export { DOMSelectors };

@@ -1,6 +1,8 @@
 import { lol } from "./api";
 import { DOMSelectors } from "./DOM";
 
+console.log(DOMSelectors);
+
 import "regenerator-runtime/runtime";
 
 const query = `http://ddragon.leagueoflegends.com/cdn/10.23.1/data/en_US/champion.json`;
@@ -17,7 +19,7 @@ const init = async function () {
     Promise.all([riotdata, psdata]).then((values) => {
       console.log(values);
       values.forEach((champ) => {
-        DOMSelectors.champs.insertAdjacentHTML(
+        DOMSelectors.displayContainer.insertAdjacentHTML(
           "beforeend",
           `<div class="champ-profile">
         <div class="champ-profile-img">
@@ -26,20 +28,6 @@ const init = async function () {
             alt=""
             class="poster"
           />
-        </div>
-        <div class="movie-card-back">
-          <h3 class="movie-card-header">${movie.original_title}</h3>
-          <div class="score-box">
-            <p class="user-score">Community Score</p>
-            <p class="user-score">${movie.vote_average}</p>
-          </div>
-          <div class="release-box">
-            <p class="release-date">Released</p>
-            <p class="release-date">${movie.release_date}</p>
-          </div>
-          <div class="movie-genres">
-            <div>${genreArr}</div>
-          </div>
         </div>
       </div>`
         );
