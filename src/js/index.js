@@ -10,12 +10,23 @@ const init = async function () {
   try {
     const response = await fetch(query);
     const list = await response.json();
-    console.log(list);
+    //coverts the api objects into an array, allowing it to be passed through forEach
+    const champNames = Object.values(list.data);
+    console.log(champNames);
 
-    list.data.forEach((champ) => {
+    //using champ.id instead of champ.name gives the names with no spaces, which is needed if accessing a url such as the images
+    champNames.forEach((champ) => {
       DOMSelectors.displayContainer.insertAdjacentHTML(
         "beforeend",
-        `<p class="please-work">${champ.name}</p>`
+        `<div class="champ-card">
+        <div class="champ-card-front">
+          <img
+            src="http://ddragon.leagueoflegends.com/cdn/img/champion/loading/${champ.id}_0.jpg"
+            alt=""
+            class="poster"
+          />
+        </div>
+      </div>`
       );
     });
   } catch (error) {
@@ -24,3 +35,11 @@ const init = async function () {
 };
 
 init();
+
+/*<div class="champ-card">
+        <div class="champ-card-front">
+          <img
+            src="http://ddragon.leagueoflegends.com/cdn/img/champion/loading/${champ.id}_0.jpg"
+            alt=""
+            class="poster"
+          />*/
