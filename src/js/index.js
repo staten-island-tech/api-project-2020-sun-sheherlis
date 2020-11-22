@@ -16,6 +16,7 @@ const init = async function () {
 
     //using champ.id instead of champ.name gives the names with no spaces, which is needed if accessing a url such as the images
     champNames.forEach((champ) => {
+      //stats had the same issue as the actual values, turned them into an array to display them
       const stats = Object.values(champ.info);
       DOMSelectors.displayContainer.insertAdjacentHTML(
         "beforeend",
@@ -52,11 +53,3 @@ const init = async function () {
 };
 
 init();
-
-/*<div class="champ-card">
-        <div class="champ-card-front">
-          <img
-            src="http://ddragon.leagueoflegends.com/cdn/img/champion/loading/${champ.id}_0.jpg"
-            alt=""
-            class="poster"
-          />*/
