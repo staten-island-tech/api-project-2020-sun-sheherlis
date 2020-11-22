@@ -16,6 +16,7 @@ const init = async function () {
 
     //using champ.id instead of champ.name gives the names with no spaces, which is needed if accessing a url such as the images
     champNames.forEach((champ) => {
+      const stats = Object.values(champ.info);
       DOMSelectors.displayContainer.insertAdjacentHTML(
         "beforeend",
         `<div class="champ-card">
@@ -25,6 +26,22 @@ const init = async function () {
             alt=""
             class="poster"
           />
+        </div>
+        <div class="champ-card-back">
+          <h3 class="champ-card-header">${champ.name}</h3>
+          <div class="stat-box">
+            <p class="champ-stats">Basic Stats</p>
+            <div class="champ-stats-info">
+              <p class="champ-stats-info, attack">Attack: ${stats[0]}</p>
+              <p class="champ-stats-info, defense">Defense: ${stats[1]}</p>
+              <p class="champ-stats-info, magic">Magic: ${stats[2]}</p>
+              <p class="champ-stats-info, difficulty">Difficulty: ${stats[3]}</p>
+            </div>
+          </div>
+          <div class="class-box">
+            <p class="champ-class">Class(es)</p>
+            <p class="champ-class">${champ.tags}</p>
+          </div>
         </div>
       </div>`
       );
