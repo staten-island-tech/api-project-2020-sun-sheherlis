@@ -1,4 +1,4 @@
-import { lol } from "./api";
+//import { lol } from "./api";
 import { DOMSelectors } from "./DOM";
 
 console.log(DOMSelectors);
