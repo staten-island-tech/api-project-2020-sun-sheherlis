@@ -40,7 +40,7 @@ const init = async function () {
             </div>
           </div>
           <div class="class-box">
-            <p class="champ-class">Class(es)</p>
+            <p class="champ-class">Class</p>
             <p class="champ-class">${champ.tags}</p>
           </div>
         </div>
