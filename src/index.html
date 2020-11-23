@@ -2,18 +2,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.scss">
     <title>Document</title>
 </head>
 <body>
     <section class="champ-list">
-     <!-- <div class="champ-profile">
-        <div class="champ-profile-img">
+      <!-- <div class="card"> 
+        <div class="champ-card">
+        <div class="champ-card-front">
           <img
-            src="${champ.big_image_url}"
+            src="http://ddragon.leagueoflegends.com/cdn/img/champion/loading/${champ.id}_0.jpg"
             alt=""
             class="poster"
           />
         </div>
+        <div class="champ-card-back">
+          <h3 class="champ-card-header">${champ.name}</h3>
+          <div class="stat-box">
+            <p class="champ-stats">Basic Stats</p>
+            <div class="champ-stats-info">
+              <p class="champ-stats-info, attack">Attack: ${stats[0]}</p>
+              <p class="champ-stats-info, defense">Defense: ${stats[1]}</p>
+              <p class="champ-stats-info, magic">Magic: ${stats[2]}</p>
+              <p class="champ-stats-info, difficulty">Difficulty: ${stats[3]}</p>
+            </div>
+          </div>
+          <div class="class-box">
+            <p class="champ-class">Class</p>
+            <p class="champ-class">${champ.tags}</p>
+          </div>
+        </div>
+        </div> 
       </div> -->
     </section>
     <script src="js/index.js"></script>

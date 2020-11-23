@@ -20,7 +20,8 @@ const init = async function () {
       const stats = Object.values(champ.info);
       DOMSelectors.displayContainer.insertAdjacentHTML(
         "beforeend",
-        `<div class="champ-card">
+        `<div class="card"> 
+        <div class="champ-card">
         <div class="champ-card-front">
           <img
             src="http://ddragon.leagueoflegends.com/cdn/img/champion/loading/${champ.id}_0.jpg"
@@ -44,6 +45,7 @@ const init = async function () {
             <p class="champ-class">${champ.tags}</p>
           </div>
         </div>
+        </div> 
       </div>`
       );
     });
