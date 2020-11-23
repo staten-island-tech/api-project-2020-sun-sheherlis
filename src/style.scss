@@ -1,21 +1,23 @@
-section{
+html{
     padding: 0;
     margin: 0;
     font-size: 62.5%;
     box-sizing: border-box;
+    background-color: black;
 }
 
 .champ-list{
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 
 .card {
     background-color: transparent;
-    width: 300px;
-    height: 300px;
+    width: 25rem;
+    height: 45rem;
     perspective: 1000px;
+    margin-top: 2rem;
 }
 
 .champ-card {
@@ -25,7 +27,7 @@ section{
     text-align: center;
     transition: transform 0.6s;
     transform-style: preserve-3d;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    //box-shadow: 0 4px 8px 0 #040927;
 }
 
 .card:hover .champ-card {
@@ -40,7 +42,21 @@ section{
 }
 
 .champ-card-back {
-    background-color: white;
+    background-image: linear-gradient(to bottom right, #785a28, #c89b3c, #c8aa6e, #deca7b);
     transform: rotateY(180deg);
 } 
 
+.poster{
+    height: 45rem;
+    width: auto;
+}
+
+.champ-card-header{
+    color: #006466;
+    font-size: 4rem;
+}
+
+.stat-box{
+    color: #040927;
+    font-size: 2rem;
+}
