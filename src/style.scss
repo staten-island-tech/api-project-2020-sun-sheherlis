@@ -27,7 +27,6 @@ html{
     text-align: center;
     transition: transform 0.6s;
     transform-style: preserve-3d;
-    //box-shadow: 0 4px 8px 0 #040927;
 }
 
 .card:hover .champ-card {
@@ -57,6 +56,11 @@ html{
 }
 
 .stat-box{
-    color: #040927;
+    color: #0b102c;
     font-size: 2rem;
+}
+
+.class-box{
+    color: #023031;
+    font-size: 1.5rem;
 }
