@@ -8,8 +8,9 @@ const click = function () {
         DOMSelectors.displayContainer.innerHTML = "";
         const searchPara = DOMSelectors.searchBar.value;
         console.log(searchPara);
+
         const searchInit = async function () {
-            const query = `http://ddragon.leagueoflegends.com/cdn/10.23.1/data/en_US/${searchPara}.json`;
+            const query = `http://ddragon.leagueoflegends.com/cdn/10.23.1/data/en_US/champion/${searchPara}.json`;
             console.log(query);
             try {
                 const response = await fetch(query);
