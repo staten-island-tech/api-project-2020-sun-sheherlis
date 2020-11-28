@@ -1,12 +1,12 @@
-//import { lol } from "./api";
 import { DOMSelectors } from "./DOM";
+import { click } from "./search";
 
 console.log(DOMSelectors);
 
 import "regenerator-runtime/runtime";
 
 const init = async function () {
-  const query = `http://ddragon.leagueoflegends.com/cdn/10.23.1/data/en_US/champion.json`;
+  const query = `http://ddragon.leagueoflegends.com/cdn/10.24.1/data/en_US/champion.json`;
   try {
     const response = await fetch(query);
     const list = await response.json();
