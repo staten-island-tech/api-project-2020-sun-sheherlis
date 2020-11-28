@@ -1,5 +1,5 @@
-//import { lol } from "./api";
 import { DOMSelectors } from "./DOM";
+import { click } from "./search";
 
 console.log(DOMSelectors);
 
