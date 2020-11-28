@@ -9,8 +9,12 @@ const click = function () {
     const searchPara = DOMSelectors.searchBar.value;
     console.log(searchPara);
     const searchInit = async function () {
-      const query = `http://ddragon.leagueoflegends.com/cdn/10.24.1/data/en_US/champion/${searchPara}.json`;
+      let query = `http://ddragon.leagueoflegends.com/cdn/10.24.1/data/en_US/champion/${searchPara}.json`;
       console.log(query);
+      //resets to init if search bar is blank
+      if (searchPara === "") {
+        query = `http://ddragon.leagueoflegends.com/cdn/10.24.1/data/en_US/champion.json`;
+      }
       try {
         const response = await fetch(query);
         const list = await response.json();
@@ -56,5 +60,7 @@ const click = function () {
     searchInit();
   });
 };
+
+click();
 
 export { click };

@@ -1,5 +1,5 @@
 const DOMSelectors = {
-  displayContainer: document.querySelector('.champ-list'),
+  displayContainer: document.querySelector(".champ-list"),
   searchBar: document.getElementById("search-bar"),
 };
 
