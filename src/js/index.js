@@ -13,7 +13,30 @@ const init = async function () {
     //coverts the api objects into an array, allowing it to be passed through forEach
     const champNames = Object.values(list.data);
     console.log(champNames);
-
+    const fighter = "Fighter";
+    const tank = "Tank";
+    const mage = "Mage";
+    const assassin = "Assassin";
+    const support = "Support";
+    const marksman = "Marksman";
+    const champFighter = champNames.filter((champ) => {
+      return champ.tags.indexOf(fighter) >= 0;
+    });
+    const champTank = champNames.filter((champ) => {
+      return champ.tags.indexOf(tank) >= 0;
+    });
+    const champMage = champNames.filter((champ) => {
+      return champ.tags.indexOf(mage) >= 0;
+    });
+    const champAssassin = champNames.filter((champ) => {
+      return champ.tags.indexOf(assassin) >= 0;
+    });
+    const champSupport = champNames.filter((champ) => {
+      return champ.tags.indexOf(support) >= 0;
+    });
+    const champMarksman = champNames.filter((champ) => {
+      return champ.tags.indexOf(marksman) >= 0;
+    });
     //using champ.id instead of champ.name gives the names with no spaces, which is needed if accessing a url such as the images
     champNames.forEach((champ) => {
       //stats had the same issue as the actual values, turned them into an array to display them
