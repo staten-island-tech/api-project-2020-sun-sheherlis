@@ -4,6 +4,7 @@ console.log(DOMSelectors);
 
 const click = function () {
   DOMSelectors.searchBar.addEventListener("keyup", function (e) {
+    DOMSelectors.errorMessage.innerHTML = "";
     e.preventDefault();
     DOMSelectors.displayContainer.innerHTML = "";
     const searchPara = DOMSelectors.searchBar.value;
