@@ -18,7 +18,7 @@ html {
 
 .search-box {
   position: absolute;
-  top: 10%;
+  top: 6%;
   width: 100%;
   background-image: repeating-linear-gradient(90deg, #785a28, #c89b3c, #c8aa6e, #deca7b, #deca7b, #c8aa6e, #c89b3c, #785a28);
 }
@@ -28,7 +28,7 @@ html {
   display: flex;
   justify-content: space-evenly;
   align-content: center;
-  padding-top: 6rem;
+  padding-top: 7.4rem;
 }
 
 .btn {
