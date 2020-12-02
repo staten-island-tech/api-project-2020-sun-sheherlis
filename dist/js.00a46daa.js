@@ -1033,7 +1033,7 @@ var init = /*#__PURE__*/function () {
                 //stats had the same issue as the actual values, turned them into an array to display them
                 var stats = Object.values(champ.info);
 
-                _DOM.DOMSelectors.displayContainer.insertAdjacentHTML("beforeend", "<div class=\"card\"> \n        <div class=\"champ-card\">\n        <div class=\"champ-card-front\">\n          <img\n            src=\"https://ddragon.leagueoflegends.com/cdn/img/champion/loading/".concat(champ.id, "_0.jpg\"\n            alt=\"\"\n            class=\"poster\"\n          />\n        </div>\n        <div class=\"champ-card-back\">\n          <h3 class=\"champ-card-header\">").concat(champ.name, "</h3>\n          <div class=\"stat-box\">\n            <p class=\"champ-stats\">Basic Stats</p>\n            <div class=\"champ-stats-info\">\n              <p class=\"champ-stats-info, attack\">Attack: ").concat(stats[0], "</p>\n              <p class=\"champ-stats-info, defense\">Defense: ").concat(stats[1], "</p>\n              <p class=\"champ-stats-info, magic\">Magic: ").concat(stats[2], "</p>\n              <p class=\"champ-stats-info, difficulty\">Difficulty: ").concat(stats[3], "</p>\n            </div>\n          </div>\n          <div class=\"class-box\">\n            <p class=\"champ-class\"><b>Class</b></p>\n            <p class=\"champ-class\">").concat(champ.tags, "</p>\n          </div>\n        </div>\n        </div> \n      </div>"));
+                _DOM.DOMSelectors.displayContainer.insertAdjacentHTML("beforeend", "<div class=\"card\"> \n        <div class=\"champ-card\">\n        <div class=\"champ-card-front\">\n          <img\n            src=\"https://ddragon.leagueoflegends.com/cdn/img/champion/loading/".concat(champ.id, "_0.jpg\"\n            alt=\"\"\n            class=\"poster\"\n          />\n        </div>\n        <div class=\"champ-card-back\">\n          <h3 class=\"champ-card-header\">").concat(champ.name, "</h3>\n          <div class=\"stat-box\">\n            <p class=\"champ-stats\">Basic Stats</p>\n            <div class=\"champ-stats-info\">\n              <p class=\"champ-stats-info, attack\">Attack: ").concat(stats[0], "</p>\n              <p class=\"champ-stats-info, defense\">Defense: ").concat(stats[1], "</p>\n              <p class=\"champ-stats-info, magic\">Magic: ").concat(stats[2], "</p>\n              <p class=\"champ-stats-info, difficulty\">Difficulty: ").concat(stats[3], "</p>\n            </div>\n          </div>\n          <div class=\"class-box\">\n            <p class=\"champ-class\">Class</p>\n            <p class=\"champ-class-info\">").concat(champ.tags, "</p>\n          </div>\n        </div>\n        </div> \n      </div>"));
               });
             });
 
@@ -1147,7 +1147,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57633" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55569" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
