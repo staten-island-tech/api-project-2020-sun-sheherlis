@@ -10,11 +10,11 @@ const click = function () {
     const searchPara = DOMSelectors.searchBar.value;
     console.log(searchPara);
     const searchInit = async function () {
-      let query = `http://ddragon.leagueoflegends.com/cdn/10.24.1/data/en_US/champion/${searchPara}.json`;
+      let query = `https://ddragon.leagueoflegends.com/cdn/10.24.1/data/en_US/champion/${searchPara}.json`;
       console.log(query);
       //resets to init if search bar is blank
       if (searchPara === "") {
-        query = `http://ddragon.leagueoflegends.com/cdn/10.24.1/data/en_US/champion.json`;
+        query = `https://ddragon.leagueoflegends.com/cdn/10.24.1/data/en_US/champion.json`;
       }
       try {
         const response = await fetch(query);
@@ -29,7 +29,7 @@ const click = function () {
                     <div class="champ-card">
                     <div class="champ-card-front">
                       <img
-                        src="http://ddragon.leagueoflegends.com/cdn/img/champion/loading/${champ.id}_0.jpg"
+                        src="https://ddragon.leagueoflegends.com/cdn/img/champion/loading/${champ.id}_0.jpg"
                         alt=""
                         class="poster"
                       />

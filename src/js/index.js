@@ -6,7 +6,7 @@ console.log(DOMSelectors);
 import "regenerator-runtime/runtime";
 
 const init = async function () {
-  const query = `http://ddragon.leagueoflegends.com/cdn/10.24.1/data/en_US/champion.json`;
+  const query = `https://ddragon.leagueoflegends.com/cdn/10.24.1/data/en_US/champion.json`;
   try {
     const response = await fetch(query);
     const list = await response.json();
@@ -49,7 +49,7 @@ const init = async function () {
         <div class="champ-card">
         <div class="champ-card-front">
           <img
-            src="http://ddragon.leagueoflegends.com/cdn/img/champion/loading/${champ.id}_0.jpg"
+            src="https://ddragon.leagueoflegends.com/cdn/img/champion/loading/${champ.id}_0.jpg"
             alt=""
             class="poster"
           />
@@ -86,7 +86,7 @@ const init = async function () {
         <div class="champ-card">
         <div class="champ-card-front">
           <img
-            src="http://ddragon.leagueoflegends.com/cdn/img/champion/loading/${champ.id}_0.jpg"
+            src="https://ddragon.leagueoflegends.com/cdn/img/champion/loading/${champ.id}_0.jpg"
             alt=""
             class="poster"
           />
@@ -123,7 +123,7 @@ const init = async function () {
         <div class="champ-card">
         <div class="champ-card-front">
           <img
-            src="http://ddragon.leagueoflegends.com/cdn/img/champion/loading/${champ.id}_0.jpg"
+            src="https://ddragon.leagueoflegends.com/cdn/img/champion/loading/${champ.id}_0.jpg"
             alt=""
             class="poster"
           />
@@ -160,7 +160,7 @@ const init = async function () {
         <div class="champ-card">
         <div class="champ-card-front">
           <img
-            src="http://ddragon.leagueoflegends.com/cdn/img/champion/loading/${champ.id}_0.jpg"
+            src="https://ddragon.leagueoflegends.com/cdn/img/champion/loading/${champ.id}_0.jpg"
             alt=""
             class="poster"
           />
@@ -197,7 +197,7 @@ const init = async function () {
         <div class="champ-card">
         <div class="champ-card-front">
           <img
-            src="http://ddragon.leagueoflegends.com/cdn/img/champion/loading/${champ.id}_0.jpg"
+            src="https://ddragon.leagueoflegends.com/cdn/img/champion/loading/${champ.id}_0.jpg"
             alt=""
             class="poster"
           />
@@ -234,7 +234,7 @@ const init = async function () {
         <div class="champ-card">
         <div class="champ-card-front">
           <img
-            src="http://ddragon.leagueoflegends.com/cdn/img/champion/loading/${champ.id}_0.jpg"
+            src="https://ddragon.leagueoflegends.com/cdn/img/champion/loading/${champ.id}_0.jpg"
             alt=""
             class="poster"
           />
@@ -271,7 +271,7 @@ const init = async function () {
         <div class="champ-card">
         <div class="champ-card-front">
           <img
-            src="http://ddragon.leagueoflegends.com/cdn/img/champion/loading/${champ.id}_0.jpg"
+            src="https://ddragon.leagueoflegends.com/cdn/img/champion/loading/${champ.id}_0.jpg"
             alt=""
             class="poster"
           />
