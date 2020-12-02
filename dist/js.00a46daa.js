@@ -151,15 +151,12 @@ function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try
 
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 
-console.log(_DOM.DOMSelectors);
-
 var click = function click() {
   _DOM.DOMSelectors.searchBar.addEventListener("keyup", function (e) {
     _DOM.DOMSelectors.errorMessage.innerHTML = "";
     e.preventDefault();
     _DOM.DOMSelectors.displayContainer.innerHTML = "";
     var searchPara = _DOM.DOMSelectors.searchBar.value;
-    console.log(searchPara);
 
     var searchInit = /*#__PURE__*/function () {
       var _ref = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
@@ -168,47 +165,45 @@ var click = function click() {
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
-                query = "https://ddragon.leagueoflegends.com/cdn/10.24.1/data/en_US/champion/".concat(searchPara, ".json");
-                console.log(query); //resets to init if search bar is blank
+                query = "https://ddragon.leagueoflegends.com/cdn/10.24.1/data/en_US/champion/".concat(searchPara, ".json"); //resets to init if search bar is blank
 
                 if (searchPara === "") {
                   query = "https://ddragon.leagueoflegends.com/cdn/10.24.1/data/en_US/champion.json";
                 }
 
-                _context.prev = 3;
-                _context.next = 6;
+                _context.prev = 2;
+                _context.next = 5;
                 return fetch(query);
 
-              case 6:
+              case 5:
                 response = _context.sent;
-                _context.next = 9;
+                _context.next = 8;
                 return response.json();
 
-              case 9:
+              case 8:
                 list = _context.sent;
                 champNames = Object.values(list.data);
-                console.log(champNames);
                 champNames.forEach(function (champ) {
                   var stats = Object.values(champ.info);
 
                   _DOM.DOMSelectors.displayContainer.insertAdjacentHTML("beforeend", "<div class=\"card\"> \n                    <div class=\"champ-card\">\n                    <div class=\"champ-card-front\">\n                      <img\n                        src=\"https://ddragon.leagueoflegends.com/cdn/img/champion/loading/".concat(champ.id, "_0.jpg\"\n                        alt=\"\"\n                        class=\"poster\"\n                      />\n                    </div>\n                    <div class=\"champ-card-back\">\n                      <h3 class=\"champ-card-header\">").concat(champ.name, "</h3>\n                      <div class=\"stat-box\">\n                        <p class=\"champ-stats\">Basic Stats</p>\n                        <div class=\"champ-stats-info\">\n                          <p class=\"champ-stats-info, attack\">Attack: ").concat(stats[0], "</p>\n                          <p class=\"champ-stats-info, defense\">Defense: ").concat(stats[1], "</p>\n                          <p class=\"champ-stats-info, magic\">Magic: ").concat(stats[2], "</p>\n                          <p class=\"champ-stats-info, difficulty\">Difficulty: ").concat(stats[3], "</p>\n                        </div>\n                      </div>\n                      <div class=\"class-box\">\n                        <p class=\"champ-class\"><b>Class</b></p>\n                        <p class=\"champ-class\">").concat(champ.tags, "</p>\n                      </div>\n                    </div>\n                    </div> \n                  </div>"));
                 });
-                _context.next = 19;
+                _context.next = 17;
                 break;
 
-              case 15:
-                _context.prev = 15;
-                _context.t0 = _context["catch"](3);
+              case 13:
+                _context.prev = 13;
+                _context.t0 = _context["catch"](2);
                 _DOM.DOMSelectors.errorMessage.innerHTML = "";
 
                 _DOM.DOMSelectors.errorMessage.insertAdjacentHTML("beforeend", "<p class=\"search-error-text\">No champ found! Check for proper capitalization or make the champ's name one word</p>");
 
-              case 19:
+              case 17:
               case "end":
                 return _context.stop();
             }
           }
-        }, _callee, null, [[3, 15]]);
+        }, _callee, null, [[2, 13]]);
       }));
 
       return function searchInit() {
@@ -986,8 +981,6 @@ function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try
 
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 
-console.log(_DOM.DOMSelectors);
-
 var init = /*#__PURE__*/function () {
   var _ref = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
     var query, response, list, champNames, fighter, tank, mage, assassin, support, marksman, champFighter, champTank, champMage, champAssassin, champSupport, champMarksman;
@@ -1009,7 +1002,6 @@ var init = /*#__PURE__*/function () {
             list = _context.sent;
             //coverts the api objects into an array, allowing it to be passed through forEach
             champNames = Object.values(list.data);
-            console.log(champNames);
             fighter = "Fighter";
             tank = "Tank";
             mage = "Mage";
@@ -1105,20 +1097,20 @@ var init = /*#__PURE__*/function () {
               });
             });
 
-            _context.next = 34;
+            _context.next = 33;
             break;
 
-          case 31:
-            _context.prev = 31;
+          case 30:
+            _context.prev = 30;
             _context.t0 = _context["catch"](1);
             console.log(_context.t0);
 
-          case 34:
+          case 33:
           case "end":
             return _context.stop();
         }
       }
-    }, _callee, null, [[1, 31]]);
+    }, _callee, null, [[1, 30]]);
   }));
 
   return function init() {
@@ -1155,7 +1147,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57218" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57633" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -1,8 +1,6 @@
 import { DOMSelectors } from "./DOM";
 import { click } from "./search";
 
-console.log(DOMSelectors);
-
 import "regenerator-runtime/runtime";
 
 const init = async function () {
@@ -12,7 +10,6 @@ const init = async function () {
     const list = await response.json();
     //coverts the api objects into an array, allowing it to be passed through forEach
     const champNames = Object.values(list.data);
-    console.log(champNames);
     const fighter = "Fighter";
     const tank = "Tank";
     const mage = "Mage";

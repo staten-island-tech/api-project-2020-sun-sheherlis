@@ -1,17 +1,13 @@
 import { DOMSelectors } from "./DOM";
 
-console.log(DOMSelectors);
-
 const click = function () {
   DOMSelectors.searchBar.addEventListener("keyup", function (e) {
     DOMSelectors.errorMessage.innerHTML = "";
     e.preventDefault();
     DOMSelectors.displayContainer.innerHTML = "";
     const searchPara = DOMSelectors.searchBar.value;
-    console.log(searchPara);
     const searchInit = async function () {
       let query = `https://ddragon.leagueoflegends.com/cdn/10.24.1/data/en_US/champion/${searchPara}.json`;
-      console.log(query);
       //resets to init if search bar is blank
       if (searchPara === "") {
         query = `https://ddragon.leagueoflegends.com/cdn/10.24.1/data/en_US/champion.json`;
@@ -20,7 +16,6 @@ const click = function () {
         const response = await fetch(query);
         const list = await response.json();
         const champNames = Object.values(list.data);
-        console.log(champNames);
         champNames.forEach((champ) => {
           const stats = Object.values(champ.info);
           DOMSelectors.displayContainer.insertAdjacentHTML(
