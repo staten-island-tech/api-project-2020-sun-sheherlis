@@ -196,7 +196,7 @@ var click = function click() {
                 _context.t0 = _context["catch"](2);
                 _DOM.DOMSelectors.errorMessage.innerHTML = "";
 
-                _DOM.DOMSelectors.errorMessage.insertAdjacentHTML("beforeend", "<p class=\"search-error-text\">No champ found! Check for proper capitalization or make the champ's name one word</p>");
+                _DOM.DOMSelectors.errorMessage.insertAdjacentHTML("beforeend", "<p class=\"search-error-text\">No champ found! Check for proper capitalization or make the champ's name one word!</p>");
 
               case 17:
               case "end":
@@ -1147,7 +1147,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50347" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54561" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

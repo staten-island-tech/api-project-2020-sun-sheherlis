@@ -53,7 +53,7 @@ const click = function () {
         DOMSelectors.errorMessage.innerHTML = "";
         DOMSelectors.errorMessage.insertAdjacentHTML(
           "beforeend",
-          `<p class="search-error-text">No champ found! Check for proper capitalization or make the champ's name one word</p>`
+          `<p class="search-error-text">No champ found! Check for proper capitalization or make the champ's name one word!</p>`
         );
       }
     };

@@ -18,9 +18,23 @@ html {
 
 .search-box {
   position: absolute;
-  top: 6%;
-  width: 100%;
-  background-image: repeating-linear-gradient(90deg, #785a28, #c89b3c, #c8aa6e, #deca7b, #deca7b, #c8aa6e, #c89b3c, #785a28);
+  top: 10%;
+  width: 99%;
+}
+
+input#search-bar {
+  width: 20rem;
+}
+
+input.search-txt {
+  background-color: rgba(0, 0, 0, 0.144);
+  color: #d1fafd;
+  font-weight: bolder;
+  border: none;
+}
+
+input::placeholder {
+  opacity: 1;
 }
 
 .btns {
@@ -121,6 +135,11 @@ html {
   font-size: 4rem;
   color: white;
   text-align: center;
+}
+
+.search-error-text {
+  color: #ca0101;
+  font-weight: bolder;
 }
 
 /*# sourceMappingURL=/style.97fcb138.css.map */
