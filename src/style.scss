@@ -18,7 +18,7 @@ html {
 
 .search-box {
   position: absolute;
-  top: 10%;
+  top: 6.5%;
   width: 99%;
 }
 
@@ -33,7 +33,7 @@ input.search-txt {
   border: none;
 }
 
-input::placeholder{
+input::placeholder {
   opacity: 1;
 }
 
@@ -154,7 +154,7 @@ input::placeholder{
   text-align: center;
 }
 
-.search-error-text{
+.search-error-text {
   color: rgb(202, 1, 1);
   font-weight: bolder;
 }
